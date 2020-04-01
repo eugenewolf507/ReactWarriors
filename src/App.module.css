@@ -1,0 +1,36 @@
+.appHeading {
+  font-size: 20px;
+  text-align: center;
+  padding: 2%;
+  margin: 0;
+  background: #aee4c6;
+}
+
+.btn--like {
+  background: lightblue;
+}
+
+.mainwatch {
+  display: flex;
+  justify-content: space-between;
+}
+
+.asside {
+  min-width: 15%;
+  padding-top: 2%;
+  padding-left: 2%;
+}
+
+.movieList {
+  width: 300px;
+  margin: 0 auto;
+}
+
+@media (min-width: 480px) {
+  .movieList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+}
