@@ -18,6 +18,13 @@
   height: auto;
 }
 
+.btnAdd {
+  background: greenyellow;
+}
+
+.btnRemove {
+}
+
 @media (min-width: 480px) {
   .movieItem {
     width: 300px;
