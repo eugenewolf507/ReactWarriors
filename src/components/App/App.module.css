@@ -1,0 +1,15 @@
+.btn--like {
+  background: lightblue;
+}
+
+.mainwatch {
+  display: flex;
+  justify-content: space-between;
+}
+
+.asside {
+  width: 30%;
+  padding-top: 2%;
+  padding-left: 2%;
+  padding: 5% 2%;
+}

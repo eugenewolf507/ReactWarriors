@@ -1,0 +1,19 @@
+.notFoundStyles {
+  text-align: center;
+  margin: 0;
+  padding: 5% 10%;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+@media (min-width: 480px) {
+  .notFoundStyles {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .notFoundStyles {
+    font-size: 3rem;
+  }
+}

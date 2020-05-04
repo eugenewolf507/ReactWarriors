@@ -1,0 +1,53 @@
+.movieItem {
+  padding: 1%;
+}
+
+.statistics {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.poster {
+  width: 100%;
+  height: auto;
+}
+
+.linkTo {
+  color: #000;
+  text-decoration: none;
+}
+
+.button {
+  padding: 5px 15px;
+  text-align: center;
+  text-decoration: none;
+  margin: 4px 0;
+  border-radius: 4px;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border: 2px solid #01d277;
+}
+
+.btnDel {
+  background-color: #01d277;
+  color: white;
+}
+
+.btnAdd {
+  background-color: white;
+  color: black;
+}
+
+@media (min-width: 480px) {
+  .movieItem {
+    width: 200px;
+    margin: 0 auto;
+  }
+}

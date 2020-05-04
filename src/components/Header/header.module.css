@@ -1,0 +1,29 @@
+.appHeader {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  font-size: 20px;
+  text-align: center;
+  padding: 2%;
+  margin: 0;
+  background: #000;
+}
+
+.appLogo {
+  height: 60px;
+  pointer-events: none;
+  padding: 0;
+}
+
+.appHeading {
+  margin: 0 auto;
+  padding: 0;
+  color: #01d277;
+  padding-right: 60px;
+}
+
+.nav {
+  color: #01d277;
+  text-decoration: none;
+  font-weight: 600;
+}

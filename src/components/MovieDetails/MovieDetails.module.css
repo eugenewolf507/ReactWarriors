@@ -2,34 +2,29 @@
   padding: 1%;
 }
 
-.statistics {
+.descriptionWrapper {
   display: flex;
-  justify-content: space-between;
+}
+
+.statistics {
+  padding: 10px;
+  margin: 0;
 }
 
 .title {
-  font-size: 15px;
-  font-weight: normal;
+  font-size: 40px;
+  font-weight: bold;
   text-align: center;
 }
 
 .poster {
   width: 100%;
   height: auto;
+  padding: 10px;
 }
 
-.btnAdd {
+.btnDelete {
   background: greenyellow;
-}
-
-.btnRemove {
-}
-
-@media (min-width: 480px) {
-  .movieItem {
-    width: 300px;
-    margin: 0 auto;
-  }
 }
 
 /* 
