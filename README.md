@@ -1,13 +1,28 @@
-Movie App
+# Movie App
 
-Pet project for training and job search. React Redux Thunk ...
+## [Try this App on GithubPages](https://eugenewolf507.github.io/MovieApp/).
+
+## Tech stack:
+
+- React.js
+- Redux
+- ReduxThunk
+- HashRouter
+- PropTypes
+- Axios
+
 
 This project was bootstrapped with
 [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### Available Scripts
 
-### `npm start`
+In the project directory, you can run:
 
-Runs the app in the development mode.<br /> Open
-[http://localhost:3000](http://localhost:3000) to view it in the browser.
+#### `npm start`
+
+Runs the app in the development mode.<br />
+
+#### `npm run deploy`
+
+Deploy the app to the gh-pages
