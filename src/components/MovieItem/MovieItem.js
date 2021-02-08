@@ -1,14 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import styles from './MovieItem.module.css';
 import { addToFavorite, deleteFromFavorite } from './movieItemAction';
 import { POSTER_URL } from '../../utils/api';
+import { getAllFavorites } from '../../redux/moviesSelectors';
 
 const MovieItem = ({ movie, favorites, addToFavorite, deleteFromFavorite }) => (
   <div className={styles.movieItem}>
-    <Link to={`/movies/${movie.id}`} className={styles.linkTo}>
+    <NavLink
+      to={`/movies/${movie.id}`}
+      className={styles.linkTo}
+      activeClassName={styles.activeLinkTo}
+    >
       <h2 className={styles.title}>{movie.title} </h2>
       <img
         src={POSTER_URL + movie.poster_path}
@@ -20,7 +25,7 @@ const MovieItem = ({ movie, favorites, addToFavorite, deleteFromFavorite }) => (
       <div>Popularity: {movie.popularity}</div>
       <div>Release date: {movie.release_date}</div>
       <br />
-    </Link>
+    </NavLink>
     {favorites.some(favorite => favorite.id === movie.id) ? (
       <button
         type="button"
@@ -63,7 +68,7 @@ MovieItem.propTypes = {
 };
 
 const mapStateToProps = state => ({
-  favorites: state.favorites,
+  favorites: getAllFavorites(state),
 });
 
 const mapDispatchToProps = { addToFavorite, deleteFromFavorite };

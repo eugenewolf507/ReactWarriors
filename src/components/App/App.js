@@ -1,6 +1,5 @@
 import React from 'react';
 import { Route, Switch, Link } from 'react-router-dom';
-import styles from './App.module.css';
 import Header from '../Header/Header';
 import MoviePage from '../../pages/MoviePage/MoviePage';
 import Footer from '../Footer/Footer';

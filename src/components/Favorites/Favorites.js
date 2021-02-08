@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import styles from './favorites.module.css';
+import { getAllFavorites } from '../../redux/moviesSelectors';
 
 const Favorites = ({ favorites }) => (
-  <div>
+  <div className={styles.wrapper}>
     <h3>Favorites:</h3>
     {!favorites.length && <p>No favorite movies yet :(</p>}
     <ul>
@@ -19,7 +21,7 @@ Favorites.propTypes = {
 };
 
 const mapStateToProps = state => ({
-  favorites: state.favorites,
+  favorites: getAllFavorites(state),
 });
 
 const mapDispatchToProps = {};

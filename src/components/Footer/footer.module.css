@@ -19,14 +19,15 @@ a:visited {
   color: #01d277;
 }
 
-@media (min-width: 480px) {
+@media (min-width: 768px) {
   .appFooter {
     font-size: 1.2rem;
+    padding: 2%;
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
   .appFooter {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
   }
 }

@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
 import styles from './MovieDetails.module.css';
 import { addToFavorite, deleteFromFavorite } from './movieDetailsAction';
 import { POSTER_URL } from '../../utils/api';
+import { getAllFavorites } from '../../redux/moviesSelectors';
 
 const MovieDetails = ({
   movie,
@@ -14,42 +14,36 @@ const MovieDetails = ({
 }) => (
   <div className={styles.movieItem}>
     <h2 className={styles.title}>{movie.title} </h2>
-    <div className={styles.descriptionWrapper}>
-      <div>
-        <img
-          src={POSTER_URL + movie.poster_path}
-          alt={movie.title}
-          className={styles.poster}
-        />
-        <div className={styles.statistics}>
-          <p className={styles.voteAverage}>Rating: {movie.vote_average}</p>
-          <p className={styles.voteCount}>Votes: {movie.vote_count}</p>
-          <p className={styles.popularity}>Popularity: {movie.popularity}</p>
-        </div>
-      </div>
+    <img
+      src={POSTER_URL + movie.poster_path}
+      alt={movie.title}
+      className={styles.poster}
+    />
+    <div className={styles.aboutText}>
+      <p>Rating: {movie.vote_average}</p>
+      <p>Votes: {movie.vote_count}</p>
+      <p>Popularity: {movie.popularity}</p>
+      <p>{movie.overview}</p>
+      <p>Release date {movie.release_date}</p>
 
-      <div>
-        <div>
-          <p className={styles.overview}>{movie.overview}</p>
-          <p className={styles.releaseDate}>
-            Release date {movie.release_date}
-          </p>
-        </div>
-      </div>
+      {favorites.some(favorite => favorite.id === movie.id) ? (
+        <button
+          type="button"
+          className={`${styles.btnDel} ${styles.button}`}
+          onClick={() => deleteFromFavorite(movie)}
+        >
+          Favorite
+        </button>
+      ) : (
+        <button
+          type="button"
+          className={`${styles.btnAdd} ${styles.button}`}
+          onClick={() => addToFavorite(movie)}
+        >
+          Favorite
+        </button>
+      )}
     </div>
-    {favorites.some(favorite => favorite.id === movie.id) ? (
-      <button
-        type="button"
-        className={styles.btnDelete}
-        onClick={() => deleteFromFavorite(movie)}
-      >
-        DeleteFromFavorite
-      </button>
-    ) : (
-      <button type="button" onClick={() => addToFavorite(movie)}>
-        AddToFavorite
-      </button>
-    )}
   </div>
 );
 
@@ -75,7 +69,7 @@ MovieDetails.propTypes = {
 };
 
 const mapStateToProps = state => ({
-  favorites: state.favorites,
+  favorites: getAllFavorites(state),
 });
 
 const mapDispatchToProps = { addToFavorite, deleteFromFavorite };

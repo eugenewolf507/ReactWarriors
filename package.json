@@ -2,11 +2,13 @@
   "name": "react-warriors",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://eugenewolf507.github.io/MovieApp",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.19.2",
+    "gh-pages": "^2.2.0",
     "history": "^4.10.1",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
@@ -26,7 +28,9 @@
     "eject": "react-scripts eject",
     "lint": "eslint src/**/*.js",
     "lint:fix": "eslint src/**/*.js --fix",
-    "lint:format": "prettier src/**/*.{js,css,json} --write"
+    "lint:format": "prettier src/**/*.{js,css,json} --write",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"

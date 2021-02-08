@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import MovieItem from '../MovieItem/MovieItem';
 import fetchMovies from './movieListOperations';
 import styles from './movieList.module.css';
+import { getAllMovies, getSortBy } from '../../redux/moviesSelectors';
 
 class MovieList extends Component {
   componentDidMount() {
@@ -23,9 +24,7 @@ class MovieList extends Component {
       <ul className={styles.movieList}>
         {movies.map(movie => (
           <li key={movie.id}>
-            {/* <Link to={`/movies/${movie.id}`}> */}
             <MovieItem movie={movie} />
-            {/* </Link> */}
           </li>
         ))}
       </ul>
@@ -34,8 +33,8 @@ class MovieList extends Component {
 }
 
 const mapStateToProps = state => ({
-  movies: state.moviesList.movies,
-  sortBy: state.selectValue.value,
+  movies: getAllMovies(state),
+  sortBy: getSortBy(state),
 });
 
 const mapDispatchToProps = {

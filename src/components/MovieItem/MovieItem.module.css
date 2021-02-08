@@ -2,11 +2,6 @@
   padding: 1%;
 }
 
-.statistics {
-  display: flex;
-  justify-content: space-between;
-}
-
 .title {
   font-size: 20px;
   font-weight: bold;
@@ -19,6 +14,11 @@
 }
 
 .linkTo {
+  color: #000;
+  text-decoration: none;
+}
+
+.activeLinkTo {
   color: #000;
   text-decoration: none;
 }
@@ -45,9 +45,15 @@
   color: black;
 }
 
-@media (min-width: 480px) {
+@media (min-width: 468px) {
   .movieItem {
-    width: 200px;
+    width: 250px;
     margin: 0 auto;
+    padding: 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .movieItem {
   }
 }

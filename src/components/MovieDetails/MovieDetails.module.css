@@ -1,18 +1,9 @@
 .movieItem {
-  padding: 1%;
-}
-
-.descriptionWrapper {
-  display: flex;
-}
-
-.statistics {
-  padding: 10px;
-  margin: 0;
+  padding: 5%;
 }
 
 .title {
-  font-size: 40px;
+  font-size: 20px;
   font-weight: bold;
   text-align: center;
 }
@@ -20,25 +11,69 @@
 .poster {
   width: 100%;
   height: auto;
-  padding: 10px;
 }
 
-.btnDelete {
-  background: greenyellow;
+.button {
+  padding: 5px 15px;
+  text-align: center;
+  text-decoration: none;
+  margin: 4px 0;
+  border-radius: 4px;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border: 2px solid #01d277;
 }
 
-/* 
-.voteCount {
+.btnDel {
+  background-color: #01d277;
+  color: white;
 }
 
-.voteAveragevie {
+.btnAdd {
+  background-color: white;
+  color: black;
 }
 
-.popularity {
+@media screen and (min-width: 768px) {
+  .movieItem {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .title {
+    font-size: 25px;
+    width: 100%;
+  }
+
+  .poster {
+    width: 50%;
+  }
+
+  .aboutText {
+    width: 50%;
+    padding: 0 2%;
+    box-sizing: border-box;
+  }
 }
 
-.overview {
-}
+@media screen and (min-width: 1200px) {
+  .movieItem {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 
-.releaseDate {
-} */
+  .title {
+    font-size: 35px;
+  }
+
+  .poster {
+    width: 48%;
+    height: auto;
+  }
+
+  .aboutText {
+    width: 48%;
+  }
+}

@@ -1,10 +1,11 @@
-.mainwatch {
-  /*   
-  display: flex;
-  justify-content: space-between; */
-}
+@media (min-width: 1200px) {
+  .mainwatch {
+    display: flex;
+    justify-content: space-between;
+  }
 
-.asside {
-  width: 30%;
-  padding: 5% 2%;
+  .asside {
+    width: 20%;
+    padding: 5% 2%;
+  }
 }

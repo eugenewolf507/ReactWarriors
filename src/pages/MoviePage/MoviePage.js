@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import axios from 'axios';
 import { API_URL, API_KEY } from '../../utils/api';
 import MovieDetails from '../../components/MovieDetails/MovieDetails';
@@ -31,7 +30,7 @@ export class ArticlePage extends Component {
     const { movieData } = this.state;
 
     return (
-      <div>
+      <div className={styles.wrapper}>
         {movieData && <MovieDetails movie={movieData} />}
         <button
           type="button"
@@ -45,8 +44,4 @@ export class ArticlePage extends Component {
   }
 }
 
-const mapStateToProps = state => ({});
-
-const mapDispatchToProps = {};
-
-export default connect(mapStateToProps, mapDispatchToProps)(ArticlePage);
+export default ArticlePage;

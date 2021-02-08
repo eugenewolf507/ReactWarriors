@@ -6,10 +6,10 @@ import MovieList from '../../components/MovieList/MovieList';
 
 const MoviesPage = () => (
   <div className={styles.mainwatch}>
-    {/* <div className={styles.asside}> */}
-    <Selector />
-    <Favorites />
-    {/* </div> */}
+    <div className={styles.asside}>
+      <Selector />
+      <Favorites />
+    </div>
     <MovieList />
   </div>
 );
