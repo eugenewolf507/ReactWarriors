@@ -1,11 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import styles from './MovieItem.module.css';
-import { addToFavorite, deleteFromFavorite } from './movieItemAction';
 import { POSTER_URL } from '../../utils/api';
-import { getAllFavorites } from '../../redux/moviesSelectors';
 
 const MovieItem = ({ movie, favorites, addToFavorite, deleteFromFavorite }) => (
   <div className={styles.movieItem}>
@@ -67,10 +64,4 @@ MovieItem.propTypes = {
   deleteFromFavorite: PropTypes.func.isRequired,
 };
 
-const mapStateToProps = state => ({
-  favorites: getAllFavorites(state),
-});
-
-const mapDispatchToProps = { addToFavorite, deleteFromFavorite };
-
-export default connect(mapStateToProps, mapDispatchToProps)(MovieItem);
+export default MovieItem;

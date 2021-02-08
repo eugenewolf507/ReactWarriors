@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
+
 import styles from './favorites.module.css';
-import { getAllFavorites } from '../../redux/moviesSelectors';
 
 const Favorites = ({ favorites }) => (
   <div className={styles.wrapper}>
@@ -20,10 +19,4 @@ Favorites.propTypes = {
   prop: PropTypes,
 };
 
-const mapStateToProps = state => ({
-  favorites: getAllFavorites(state),
-});
-
-const mapDispatchToProps = {};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Favorites);
+export default Favorites;

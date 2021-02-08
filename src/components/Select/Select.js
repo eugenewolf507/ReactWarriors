@@ -1,10 +1,9 @@
 import React from 'react';
 import Select from 'react-select';
-import { connect } from 'react-redux';
+
 import PropTypes from 'prop-types';
-import { selectAction } from './selectActions';
+
 import styles from './select.module.css';
-import getSelectValue from '../../redux/selectorSelectors';
 
 const options = [
   { value: 'top_rated', label: 'Top Rated' },
@@ -36,10 +35,4 @@ Selector.propTypes = {
   selectAction: PropTypes.objectOf(PropTypes.string).isRequired,
 };
 
-const mapStateToProps = state => ({
-  value: getSelectValue(state),
-});
-
-const mapDispatchToProps = { selectAction };
-
-export default connect(mapStateToProps, mapDispatchToProps)(Selector);
+export default Selector;

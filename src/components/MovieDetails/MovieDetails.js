@@ -1,10 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
 import styles from './MovieDetails.module.css';
-import { addToFavorite, deleteFromFavorite } from './movieDetailsAction';
 import { POSTER_URL } from '../../utils/api';
-import { getAllFavorites } from '../../redux/moviesSelectors';
 
 const MovieDetails = ({
   movie,
@@ -68,10 +65,4 @@ MovieDetails.propTypes = {
   deleteFromFavorite: PropTypes.func.isRequired,
 };
 
-const mapStateToProps = state => ({
-  favorites: getAllFavorites(state),
-});
-
-const mapDispatchToProps = { addToFavorite, deleteFromFavorite };
-
-export default connect(mapStateToProps, mapDispatchToProps)(MovieDetails);
+export default MovieDetails;

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { API_URL, API_KEY } from '../../utils/api';
-import MovieDetails from '../../components/MovieDetails/MovieDetails';
+import MovieDetails from '../../components/MovieDetails/MovieDetailsContainer';
 import styles from './moviePage.module.css';
 
 export class ArticlePage extends Component {

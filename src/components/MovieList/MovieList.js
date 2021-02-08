@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import MovieItem from '../MovieItem/MovieItem';
-import fetchMovies from './movieListOperations';
+import MovieItem from '../MovieItem/MovieItemContainer';
 import styles from './movieList.module.css';
-import { getAllMovies, getSortBy } from '../../redux/moviesSelectors';
 
 class MovieList extends Component {
   componentDidMount() {
@@ -32,17 +29,6 @@ class MovieList extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  movies: getAllMovies(state),
-  sortBy: getSortBy(state),
-});
-
-const mapDispatchToProps = {
-  fetchMovies,
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(MovieList);
-
 MovieList.propTypes = {
   sortBy: PropTypes.string.isRequired,
   fetchMovies: PropTypes.func.isRequired,
@@ -63,3 +49,5 @@ MovieList.propTypes = {
     vote_count: PropTypes.number,
   }).isRequired,
 };
+
+export default MovieList;
