@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import ToMoviesButton from '../../components/ToMoviesButton/ToMoviesButton';
 import { API_URL, API_KEY } from '../../utils/api';
 import MovieDetails from '../../components/MovieDetails/MovieDetailsContainer';
 import styles from './moviePage.module.css';
 
-export class ArticlePage extends Component {
+export class MoviePage extends Component {
   state = {};
 
   componentDidMount() {
@@ -21,27 +22,16 @@ export class ArticlePage extends Component {
       });
   }
 
-  handleGoToMovies = () => {
-    // add query
-    this.props.history.push('/movies');
-  };
-
   render() {
     const { movieData } = this.state;
 
     return (
       <div className={styles.wrapper}>
         {movieData && <MovieDetails movie={movieData} />}
-        <button
-          type="button"
-          className={styles.button}
-          onClick={this.handleGoToMovies}
-        >
-          <span>Back to movies</span>
-        </button>
+        <ToMoviesButton />
       </div>
     );
   }
 }
 
-export default ArticlePage;
+export default MoviePage;

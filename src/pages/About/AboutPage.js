@@ -1,4 +1,5 @@
 import React from 'react';
+import ToMoviesButton from '../../components/ToMoviesButton/ToMoviesButton';
 import styles from './aboutPage.module.css';
 
 const About = () => {
@@ -15,6 +16,7 @@ const About = () => {
         <li>CSS Modules</li>
         <li>Mobile-first</li>
       </ul>
+      <ToMoviesButton />
     </div>
   );
 };
