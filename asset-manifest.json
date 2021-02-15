@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/MovieApp/static/css/main.ffc898e6.chunk.css",
-    "main.js": "/MovieApp/static/js/main.1e68f2be.chunk.js",
-    "main.js.map": "/MovieApp/static/js/main.1e68f2be.chunk.js.map",
+    "main.css": "/MovieApp/static/css/main.ed09b3bf.chunk.css",
+    "main.js": "/MovieApp/static/js/main.ff36c102.chunk.js",
+    "main.js.map": "/MovieApp/static/js/main.ff36c102.chunk.js.map",
     "runtime-main.js": "/MovieApp/static/js/runtime-main.1599e140.js",
     "runtime-main.js.map": "/MovieApp/static/js/runtime-main.1599e140.js.map",
-    "static/js/2.ee54a21c.chunk.js": "/MovieApp/static/js/2.ee54a21c.chunk.js",
-    "static/js/2.ee54a21c.chunk.js.map": "/MovieApp/static/js/2.ee54a21c.chunk.js.map",
+    "static/js/2.2a2be461.chunk.js": "/MovieApp/static/js/2.2a2be461.chunk.js",
+    "static/js/2.2a2be461.chunk.js.map": "/MovieApp/static/js/2.2a2be461.chunk.js.map",
     "index.html": "/MovieApp/index.html",
-    "precache-manifest.a009752a49fee92edbf64e4b4e49e90e.js": "/MovieApp/precache-manifest.a009752a49fee92edbf64e4b4e49e90e.js",
+    "precache-manifest.19ad3be0d47409ba05e167d771031fc8.js": "/MovieApp/precache-manifest.19ad3be0d47409ba05e167d771031fc8.js",
     "service-worker.js": "/MovieApp/service-worker.js",
-    "static/css/main.ffc898e6.chunk.css.map": "/MovieApp/static/css/main.ffc898e6.chunk.css.map",
-    "static/js/2.ee54a21c.chunk.js.LICENSE.txt": "/MovieApp/static/js/2.ee54a21c.chunk.js.LICENSE.txt",
+    "static/css/main.ed09b3bf.chunk.css.map": "/MovieApp/static/css/main.ed09b3bf.chunk.css.map",
+    "static/js/2.2a2be461.chunk.js.LICENSE.txt": "/MovieApp/static/js/2.2a2be461.chunk.js.LICENSE.txt",
     "static/media/logo.svg": "/MovieApp/static/media/logo.c875b997.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.1599e140.js",
-    "static/js/2.ee54a21c.chunk.js",
-    "static/css/main.ffc898e6.chunk.css",
-    "static/js/main.1e68f2be.chunk.js"
+    "static/js/2.2a2be461.chunk.js",
+    "static/css/main.ed09b3bf.chunk.css",
+    "static/js/main.ff36c102.chunk.js"
   ]
 }
