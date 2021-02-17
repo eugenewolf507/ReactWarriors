@@ -1,37 +1,16 @@
-import React, { Component } from 'react';
-import axios from 'axios';
+import React from 'react';
 import ToMoviesButton from '../../components/ToMoviesButton/ToMoviesButton';
-import { API_URL, API_KEY } from '../../utils/api';
 import MovieDetails from '../../components/MovieDetails/MovieDetailsContainer';
 import styles from './moviePage.module.css';
 
-export class MoviePage extends Component {
-  state = {};
-
-  componentDidMount() {
-    const { match } = this.props;
-    axios
-      .get(
-        `${API_URL}/movie/${match.params.movieId}?api_key=${API_KEY}&language=en-US`,
-      )
-      .then(responce => {
-        this.setState({ movieData: responce.data });
-      })
-      .catch(error => {
-        this.setState({ error });
-      });
-  }
-
-  render() {
-    const { movieData } = this.state;
-
-    return (
-      <div className={styles.wrapper}>
-        {movieData && <MovieDetails movie={movieData} />}
-        <ToMoviesButton />
-      </div>
-    );
-  }
-}
+const MoviePage = props => {
+  const { match } = props;
+  return (
+    <div className={styles.wrapper}>
+      <MovieDetails matchMovieID={match.params.movieId} />
+      <ToMoviesButton />
+    </div>
+  );
+};
 
 export default MoviePage;
